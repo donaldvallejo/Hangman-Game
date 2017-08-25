@@ -1,0 +1,70 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/maxresdefault.png");
+}
+h1 {
+  right: 2%;
+  float: right;
+  position: relative;
+}
+
+#game {
+  top: 2%;
+  right: 0%;
+  float: right;
+  position: absolute;
+}
+
+#question {
+  font-family: 'Bangers', cursive;
+  text-shadow: -2px 0 #1d4f74, 0 2px #1d4f74, 1px 0 #1d4f74, 0 -1px #1d4f74;
+  position: absolute;
+  top: 23%;
+  right: 20px;
+  font-size: 40px;
+  color: #fccc00;
+  /*background-color: white;*/
+  width: 73%;
+}
+
+.remaining {
+  position: absolute;
+  margin-top: 15%;
+  right: 15px;
+  height: 75px;
+  width: 280px;
+
+}
+
+.guessed {
+  margin-top: 5%;
+  right: 0px;
+  height: 75px;
+  width: 300px;
+}
+
+.whosThat {
+  height: 75px;
+  width: 320px;
+}
+
+.wins {
+  float: right;
+  margin-top: 28%;
+  margin-right: 120px;
+  height: 45px;
+  width: 90px;
+}
+
+.lose {
+  margin-top: 5%;
+  margin-right: 120px;
+  float: right;
+  height: 45px;
+  width: 90px;
+}
+/*div {
+  position: relative;
+  float: right;
+}*/
