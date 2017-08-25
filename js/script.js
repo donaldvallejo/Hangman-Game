@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
   document.querySelector("#question").innerHTML = empty.join(" ");
 
   userInput = ""
+
   // TODO: replace _ with correct letters in corret spots
   // function that take in the current state of the word and the letter they guessed
   function correctWord() {
@@ -80,13 +81,13 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log("not it")
     }
   }
-
-
   correctWord()
-
   console.log(empty)
 
+
+
   function guessLetter(letterPressed) {
+      userInput = "a";
     for (var i = 0; i < currentName.length; i++) {
       if (currentName[i] === letterPressed) {
         empty[i] = currentName[i]
@@ -94,14 +95,16 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
-
-  console.log(empty)
-  document.querySelector("#question").innerHTML = empty.join(" ")
-
   document.onkeyup = function(event) {
     var userInput = String.fromCharCode(event.keyCode).toLowerCase();
     guessLetter(userInput);
   };
+
+
+  console.log(empty)
+  document.querySelector("#question").innerHTML = empty.join(" ")
+
+
     // sample input: "_ _ _ _ ", "c"
     // is the guessed letter part of the string?
     // if guessed letter isnt in the string
