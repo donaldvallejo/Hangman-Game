@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var gameState = {
     names: ["pikachu","squirtle", "charmander", "bulbasour"]
   }
+  var wrongGuesses = [];
   var userInput = "";
   var pathToNames = gameState.names;
   var getRandomName = function(){
@@ -73,6 +74,8 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("letter is in the word");
         arr[i] = word[i];
         flag = true;
+      } else {
+        // put in wrong guesses
       }
     }
     return flag;
@@ -80,13 +83,15 @@ document.addEventListener("DOMContentLoaded", function() {
 
   document.onkeyup = function(event) {
     var userInput = String.fromCharCode(event.keyCode).toLowerCase();
-    console.log("userInput", userInput);
+    // console.log("userInput", userInput);
     console.log("the current word on keyup", currentName)
-    console.log("arr before", arr);
+    // console.log("arr before", arr);
     isLetterInWord(userInput, currentName);
-    console.log("arr after", arr);
+    // console.log("arr after", arr);
     document.querySelector("#question").innerHTML = arr.join(" ");
   };
+
+  wrongGuesses = document.querySelector("#question").innerHTML = wrongGuesses.join(" ");
 
 
 
