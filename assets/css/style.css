@@ -10,6 +10,7 @@ h1 {
 }
 
 #game {
+  width: 350px;
   top: 2%;
   right: 0%;
   float: right;
@@ -21,7 +22,7 @@ h1 {
   text-shadow: -2px 0 #1d4f74, 0 2px #1d4f74, 1px 0 #1d4f74, 0 -1px #1d4f74;
   position: absolute;
   top: 23%;
-  right: 20px;
+  right: 30px;
   font-size: 40px;
   color: #fccc00;
   /*background-color: white;*/
