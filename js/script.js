@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var gameState = {
-    names: ["pikachu","squirtle", "charmander", "bulbasour"]
+    names: ["pikachu","squirtle", "charmander", "bulbasaur"]
   }
   var userInput = "";
   var pathToNames = gameState.names;
@@ -18,18 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // lose variable too
   // lose++
   var loses = 0;
-
-
-  }
-    // start with _ _ _ _ for same number of words length
-    // function to replace _ _ _ _ with correct letters
-    // have a section for missed words and a section for correct words
-      // have a function that separates them
-      // counts down number of tries
-    // each word is for a different pokemon with images and sound when gueesed right.
-  // objects for stored words
-    // math.random for different key value pairs as answers.
-
+}
 
   var currentName = getRandomName();
   // get length of word
@@ -45,26 +34,16 @@ document.addEventListener("DOMContentLoaded", function() {
     // add a dash
     console.log(currentName);
     arr = arr.concat(dash);
-    // "_ _ "
-
   }
-  // console.log("currentName", currentName);
-
-  // "_ _ _ _ _ _ _ _ _ _ "
 
   currentName.length = "_ ";
   document.querySelector("#question").innerHTML = arr.join(" ");
-
-
-  // TODO: replace _ with correct letters in corret spots
-  // function that take in the current state of the word and the letter they guessed
   function correctWord() {
     console.log(currentName);
     if (userInput === currentName.length) {
     }
   }
   correctWord()
-
 
   var isLetterInWord = function (letter, word) {
     var flag = false;
@@ -76,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
     if(!flag) {
-      // TODO: check if a letter has already been guessed 
+      // TODO: check if a letter has already been guessed
       wrongGuesses.push(letter);
       // console.log("letter is wrong", letter);
       // console.log("wrongGuesses", wrongGuesses);
@@ -96,10 +75,7 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#gueesedNumber").innerHTML = wrongGuesses.join(" ");
   };
 
-
-
-
-    // sample input: "_ _ _ _ ", "c"
+  // sample input: "_ _ _ _ ", "c"
     // is the guessed letter part of the string?
     // if guessed letter isnt in the string
     // currentName.includes("guessedLetter")
@@ -120,7 +96,5 @@ document.addEventListener("DOMContentLoaded", function() {
   // TODO: press any key to get started or restart
   // TODO: refactor the code to be reset in a starting state/screen
 });
-
-
 // replace _ with correct letters
 // add wrong letters to other #
