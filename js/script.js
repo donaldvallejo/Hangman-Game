@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // lose variable too
   // lose++
   var loses = 0;
+  document.querySelector("#loseNumber").innerHTML = loses;
 }
 
   var currentName = getRandomName();
@@ -52,11 +53,15 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("letter is in the word");
         arr[i] = word[i];
         flag = true;
+        wins++;
+        console.log("wins", wins);
       }
     }
     if(!flag) {
       // TODO: check if a letter has already been guessed
       wrongGuesses.push(letter);
+      loses++;
+      console.log("loses", loses);
       // console.log("letter is wrong", letter);
       // console.log("wrongGuesses", wrongGuesses);
       // console.log("letter in wrong guesses", wrongGuesses);
