@@ -17,6 +17,13 @@ h1 {
   position: absolute;
 }
 
+#gueesedNumber {
+  font-family: 'Bangers', cursive;
+  text-shadow: -2px 0 #1d4f74, 0 2px #1d4f74, 1px 0 #1d4f74, 0 -1px #1d4f74;
+  font-size: 40px;
+  color: #fccc00;
+}
+
 #question {
   font-family: 'Bangers', cursive;
   text-shadow: -2px 0 #1d4f74, 0 2px #1d4f74, 1px 0 #1d4f74, 0 -1px #1d4f74;

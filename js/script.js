@@ -2,7 +2,6 @@ document.addEventListener("DOMContentLoaded", function() {
   var gameState = {
     names: ["pikachu","squirtle", "charmander", "bulbasour"]
   }
-  var wrongGuesses = [];
   var userInput = "";
   var pathToNames = gameState.names;
   var getRandomName = function(){
@@ -39,6 +38,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // var arr = "";
   var dash = "_";
   var arr = [];
+  var wrongGuesses = [];
   // add as many "_" as letters
   // loop the number of the words le ngth
   for (var i = 0; i < nameLength; i++) {
@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", function() {
   function correctWord() {
     console.log(currentName);
     if (userInput === currentName.length) {
-    } else {
     }
   }
   correctWord()
@@ -74,9 +73,14 @@ document.addEventListener("DOMContentLoaded", function() {
         console.log("letter is in the word");
         arr[i] = word[i];
         flag = true;
-      } else {
-        // put in wrong guesses
       }
+    }
+    if(!flag) {
+      // TODO: check if a letter has already been guessed 
+      wrongGuesses.push(letter);
+      // console.log("letter is wrong", letter);
+      // console.log("wrongGuesses", wrongGuesses);
+      // console.log("letter in wrong guesses", wrongGuesses);
     }
     return flag;
   }
@@ -89,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function() {
     isLetterInWord(userInput, currentName);
     // console.log("arr after", arr);
     document.querySelector("#question").innerHTML = arr.join(" ");
+    document.querySelector("#gueesedNumber").innerHTML = wrongGuesses.join(" ");
   };
 
-  wrongGuesses = document.querySelector("#question").innerHTML = wrongGuesses.join(" ");
 
 
 
